@@ -1,0 +1,22 @@
+
+<div class="container my-5 home">
+  <span> Snippets Created By : {{ user }}</span>
+  <br>  <br>   
+  <ol class="list-group list-group-numbered">
+    @if(items.length==0){
+    <div class="d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto fw-bold">No Snippets Found</div>
+    </div>
+    }@else { @for(item of items;track item.id){
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start list-group-item-action"
+      [routerLink]="['/snippet', item.id]"
+      style="text-decoration: none; color: black"
+    >
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{ item.title }}</div>
+      </div>
+    </li>
+    }}
+  </ol>
+</div>

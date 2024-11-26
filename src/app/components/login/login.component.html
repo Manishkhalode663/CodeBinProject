@@ -1,0 +1,87 @@
+<!-- <div class=" container">
+    <div class="mb-3 container my-5 border container-div">
+        <form class="container m-5 flex-column" [formGroup]="LoginForm">
+            <h4>Login Form</h4>
+
+            <div class="email-input">
+                <input type="email" placeholder="Email" [formControl]="email" />
+                <div class="validatorBox m-0" [hidden]="email.valid || email.untouched">
+                    enter valid email
+                </div>
+            </div>
+
+            <div class="password-input">
+                <input type="password" placeholder="Password" [formControl]="password" />
+                <div class="validatorBox m-0" [hidden]="password.valid || password.untouched">
+                    Password must have more than 6 digits
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn btn-success" [disabled]="LoginForm.invalid" (click)="login()">
+                    Log In</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-success" (click)="reset()">
+                    Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</div> -->
+
+
+<div class=" container  "  >
+    <div class="mb-3 container my-5 ">
+         
+            <form class="form" [formGroup]="LoginForm">
+    <p class="form-title">LogIn to your account</p>
+     <div class="input-container">
+       <input type="email" placeholder="Enter email" [formControl]="email">
+       <span>
+       </span>
+   </div>
+   <div class="input-container">
+       <input type="password" placeholder="Enter password"  [formControl]="password">
+     </div>
+      <button type="submit" class="submit" [disabled]="LoginForm.invalid" (click)="login()">
+     Log In
+   </button>
+
+   <p class="signup-link">
+     No account?
+     <a class="nav-link"   routerLink="/signup" routerLinkActive="active">Sign up</a>
+
+      
+   </p>
+</form>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <form class="form" [formGroup]="LoginForm">
+    <p class="form-title">Sign in to your account</p>
+     <div class="input-container">
+       <input type="email" placeholder="Enter email" [formControl]="email">
+       <span>
+       </span>
+   </div>
+   <div class="input-container">
+       <input type="password" placeholder="Enter password"  [formControl]="password">
+     </div>
+      <button type="submit" class="submit" [disabled]="LoginForm.invalid" (click)="login()">
+     Log In
+   </button>
+
+   <p class="signup-link">
+     No account?
+     <a class="nav-link"   routerLink="/signup" routerLinkActive="active">Sign up</a>
+
+      
+   </p>
+</form> -->

@@ -1,0 +1,102 @@
+<!-- <div class="container">
+  <div class="mb-3 container my-5 border container-div ">
+    <form class="container m-5 flex-column" #registerform="ngForm">
+      <h4>Sign In Form</h4>
+
+      <div class="email-input">
+        <input type="email" placeholder="Email" required pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$" ngModel name="email"
+          #email="ngModel" />
+        <div class="validatorBox m-0" [hidden]="email.valid || email.untouched">
+          enter valid email
+        </div>
+      </div>
+
+      <div class="password-input">
+        <input type="password" placeholder="Password" required name="password" minlength="6" ngModel
+          #password="ngModel" />
+        <div class="validatorBox m-0" [hidden]="password.valid || password.untouched">
+          Password must have more than 6 digits
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button type="button" class="btn btn-success" [disabled]="registerform.invalid"
+          (click)="register(registerform)">
+          Sign Up</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-success" (click)="reset(registerform)">
+          Reset
+        </button>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+
+
+<div class="container">
+  <div class="mb-3 container my-5  ">
+    <form class="form"  #registerform="ngForm">
+      <p class="form-title">Sign in to your account</p>
+       <div class="input-container">
+         <input type="email" placeholder="Enter email"  required pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$" ngModel name="email"
+         #email="ngModel">
+         <span>
+         </span>
+     </div>
+     <div class="input-container">
+         <input type="password" placeholder="Enter password"  required name="password" minlength="6" ngModel
+         #password="ngModel" >
+       </div>
+        <button type="submit" class="submit"  [disabled]="registerform.invalid"
+        (click)="register(registerform)">
+       Sign In
+     </button>
+  
+     <p class="signup-link">
+      
+       <!-- <a class="nav-link"   routerLink="/login" routerLinkActive="active">log in</a> -->
+       <a class="nav-link" routerLink="/login" routerLinkActive="active"
+       >Login</a
+     >
+        
+     </p>
+  </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form class="form"  #registerform="ngForm">
+    <p class="form-title">Sign in to your account</p>
+     <div class="input-container">
+       <input type="email" placeholder="Enter email"  required pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$" ngModel name="email"
+       #email="ngModel">
+       <span>
+       </span>
+   </div>
+   <div class="input-container">
+       <input type="password" placeholder="Enter password"  required name="password" minlength="6" ngModel
+       #password="ngModel" >
+     </div>
+      <button type="submit" class="submit"  [disabled]="registerform.invalid"
+      (click)="register(registerform)">
+     Sign In
+   </button>
+
+   <p class="signup-link">
+    
+     <!-- <a class="nav-link"   routerLink="/login" routerLinkActive="active">log in</a> -->
+     <!-- <a class="nav-link" routerLink="/login" routerLinkActive="active"
+     >Login</a
+   >
+      
+   </p>
+</form> --> -->

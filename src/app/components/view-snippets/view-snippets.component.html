@@ -1,0 +1,15 @@
+<div class="mb-3 container my-5 border  list-group-item-action snippet">
+  <div class="   topbar">
+
+    <div class="fw-bold">{{  codesnippet.title }}  </div> 
+    <div class="tooltip-container">
+
+      <span class="tooltip">{{copy}} to Clipboard</span>
+      <button class="copy btn btn-success copytoclipboard" (click)="copyToClipboard( )" #copybtn >{{copy}}</button>
+    </div>
+  </div>
+
+  <pre class="list-group-item border p-3 my-3 code" #codes>{{ codesnippet.code }}</pre>
+</div>
+
+ 
