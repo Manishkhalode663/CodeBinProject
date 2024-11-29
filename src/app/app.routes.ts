@@ -8,11 +8,13 @@ import { authGuard } from './auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { ViewSnippetsComponent } from './components/view-snippets/view-snippets.component';
 import { MyprofileComponent } from './components/myprofile/myprofile.component';
+import { EditSnippetComponent } from './components/edit-snippet/edit-snippet.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'createBin', component: CreateBinComponent, canActivate: [authGuard] },
+  { path: 'editBin/:id', component:EditSnippetComponent},
   { path: 'about', component: AboutComponent },
   { path: 'myprofile', component: MyprofileComponent },
   { path: '', component: HomeComponent },

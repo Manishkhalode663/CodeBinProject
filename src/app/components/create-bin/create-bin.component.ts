@@ -4,6 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
  import { DbService } from '../../services/db.service';
 import { Snippet } from '../../../models/snippets';
 import { RouterLink } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create-bin',
@@ -22,12 +23,21 @@ export class CreateBinComponent {
     Validators.required
   ]
   )
+  
+
   BinForm = new FormGroup({
     title: this.title,
     code: this.code
   })
+ 
+
 async  save() {
     console.log(this.BinForm.value);
-  await  this.dbService.createSnippet(this.BinForm.value as Snippet)  
-  }} 
+  await  this.dbService.createSnippet(this.BinForm.value as Snippet)  ;
+
+
+  }
+ 
+
+} 
  

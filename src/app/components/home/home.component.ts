@@ -14,10 +14,13 @@ export class HomeComponent {
 
 
   items: { id: string, title: string, by: string }[] = []
+
   ngOnInit() {
     this.dbservise.getAllSnippets().then((data: any) => {
       this.items = data
       console.log(data)
     })
   }
+
+  
 }

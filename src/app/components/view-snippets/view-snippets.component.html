@@ -1,15 +1,32 @@
-<div class="mb-3 container my-5 border  list-group-item-action snippet">
-  <div class="   topbar">
-
-    <div class="fw-bold">{{  codesnippet.title }}  </div> 
+<div class="mb-3 container my-5 border list-group-item-action snippet">
+  <div class="topbar">
+    <div class="fw-bold">{{ codesnippet.title }}</div>
     <div class="tooltip-container">
-
-      <span class="tooltip">{{copy}} to Clipboard</span>
-      <button class="copy btn btn-success copytoclipboard" (click)="copyToClipboard( )" #copybtn >{{copy}}</button>
+      <span class="tooltip">{{ copy }} to Clipboard</span>
+      <button
+        class="copy btn btn-success copytoclipboard"
+        (click)="copyToClipboard()"
+        #copybtn
+      >
+        {{ copy }}
+      </button>
     </div>
   </div>
+  <code>
+    <pre class="list-group-item border p-3 my-3 code" #codes>{{
+      codesnippet.code
+    }}</pre>
+  </code>
 
-  <pre class="list-group-item border p-3 my-3 code" #codes>{{ codesnippet.code }}</pre>
+  <div class="d-flex justify-content-end gap-3 py-3">
+    @if(this.userchecker==true){
+
+    <a class="btn btn-primary btn-sm px-3" 
+      
+    [routerLink]="['/editBin', docId]"
+    (click)="edit()"
+    >Edit</a>
+    <a class="btn btn-danger btn-sm px-3" (click)="delete()">Delete</a>
+    }
+  </div>
 </div>
-
- 
